@@ -12,19 +12,17 @@
     <body>
         <p  class="alert alert-primary text-center visually-hidden" role="alert" id="msg"> </p>
         <div class="container">
-            <h1>Gerador JSON</h1>
+            <h1>Gerador Objeto</h1>
 
-                    <label for="field1" class="m-2">Input :</label>
+                    <label for="field1" class="m-2">Label do input (chave do item no objeto) :</label>
                     <input type="text" class="form-control" id="generator"
                         name="field1" value="">
                         <select class="form-select mt-3" aria-label="Default select example" id="inputType">
-                            <option value="text" selected>text</option>
-                            <option value="number" >number</option>
-                            <option value="email">email</option>
-                            <option value="color">color</option>
+                            <option value="text" selected>Texto</option>
+                            <option value="number" >Numero</option>
+                            <option value="email">E-mail</option>
+                            <option value="color">Color</option>
                           </select>
-
-
                 <div class="d-flex justify-content-between m-4">
                     <button type="button" class="btn btn-primary"
                         onclick="addInput()">Adicionar Campo</button>
@@ -45,13 +43,12 @@
 
     </form>
 </div>
-<div class="container"> <h2>JSON:</h2></div>
+<!-- Conteudo do objeto -->
+<div class="container"> <h2>Objeto:</h2></div>
 <div id="campo" class="container bg-light p-4 mt-4">
 
-
-
-
 </div>
+<!-- Botões -->
 <div class="container d-flex w-100 justify-content-around visually-hidden" id="btnJson">
     <button type="button" class="btn btn-success m-3 " onclick="gerarJON()" id="copiarJSON">Gerar JSON</button>
     <button type="button" class="btn btn-secondary m-3 " onclick="copiar()" id="limparJSON">Copiar JSON</button>

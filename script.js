@@ -5,6 +5,10 @@ const inputType = document.getElementById('inputType');
 const message = document.getElementById('msg');
 
 function addInput () {
+
+valor = $('#generator').val();
+
+  if (valor) {
   // Cria um novo elemento de div para o novo input
   var newDiv = document.createElement('div')
   newDiv.setAttribute('class', 'form-group')
@@ -36,7 +40,11 @@ function addInput () {
   document.getElementById('inputs').appendChild(newDiv)
   $('#generator').val('')
   btns.classList.remove('visually-hidden')
-  title.classList.remove('visually-hidden')
+  title.classList.remove('visually-hidden');
+  }else{
+    exibeAlert('Por favor insira o valor do campo')
+  }
+
 }
 
 function gerarJON () {
@@ -92,3 +100,7 @@ setTimeout(() => {
     message.innerHTML = '';
 }, 1500);
  }
+
+
+
+
